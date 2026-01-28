@@ -149,8 +149,8 @@ The business exhibits a volume-driven revenue structure.
 
 The final KPIs and insights are visualized in Looker Studio.
 
-Public Looker Studio Dashboard:  
-PASTE_YOUR_LOOKER_STUDIO_LINK_HERE
+🔗 Public Looker Studio Dashboard (interactive):  
+https://lookerstudio.google.com/reporting/f5ee0132-f4aa-4810-abf8-fb8f165bafcf
 
 ### Dashboard Pages
 
@@ -161,10 +161,16 @@ PASTE_YOUR_LOOKER_STUDIO_LINK_HERE
 ![Weekly Performance](visuals/looker_02_weekly_trends.png)
 
 #### Room Type Performance
-![Response Time Performance](visuals/looker_04_room_type.png)
+![Room Type Performance](visuals/looker_04_room_type.png)
+
+🔗 View in Looker Studio:  
+https://lookerstudio.google.com/reporting/f5ee0132-f4aa-4810-abf8-fb8f165bafcf
 
 #### Response Time Performance
 ![Response Time Performance](visuals/looker_05_response_time.png)
+
+🔗 View in Looker Studio:  
+https://lookerstudio.google.com/reporting/f5ee0132-f4aa-4810-abf8-fb8f165bafcf
 
 #### Final Conclusions & Recommendations
 ![Final Conclusions](visuals/looker_05_final_conclusions.png)
