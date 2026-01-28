@@ -161,7 +161,7 @@ PASTE_YOUR_LOOKER_STUDIO_LINK_HERE
 ![Weekly Performance](visuals/looker_02_weekly_trends.png)
 
 #### Room Type Performance
-![Room Type Performance](visuals/looker_03_room_type_performance.png)
+![Response Time Performance](visuals/looker_04_room_type.png)
 
 #### Response Time Performance
 ![Response Time Performance](visuals/looker_04_response_time_performance.png)
