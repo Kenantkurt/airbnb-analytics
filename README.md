@@ -164,7 +164,7 @@ PASTE_YOUR_LOOKER_STUDIO_LINK_HERE
 ![Response Time Performance](visuals/looker_04_room_type.png)
 
 #### Response Time Performance
-![Response Time Performance](visuals/looker_04_response_time_performance.png)
+![Response Time Performance](visuals/looker_05_response_time.png)
 
 #### Final Conclusions & Recommendations
 ![Final Conclusions](visuals/looker_05_final_conclusions.png)
