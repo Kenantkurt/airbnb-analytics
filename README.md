@@ -7,7 +7,7 @@
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
 This project analyzes Airbnb demand and occupancy trends over time using SQL in Google BigQuery.
-The goal is to identify busiest and least busy periods, understand demand dynamics, and evaluate whether revenue growth is driven by price changes or demand volume.
+The goal is to identify the busiest and least busy periods, understand demand dynamics, and evaluate whether revenue growth is driven by price changes or demand volume.
 
 The project follows a production-style analytics workflow, from raw data validation to business-ready KPI tables used for visualization in Looker Studio.
 
@@ -143,11 +143,27 @@ GitHub — Version control and portfolio presentation
 
 ## 📊 Dashboard
 
-Final KPIs and insights are visualized in Looker Studio.
+The final KPIs and insights are visualized in Looker Studio.
 
-Public dashboard link can be added here.
+Public Looker Studio Dashboard:  
+PASTE_YOUR_LOOKER_STUDIO_LINK_HERE
 
-Screenshots are available in the visuals folder.
+Dashboard Pages
+
+Overview  
+![Overview](visuals/looker_01_overview.png)
+
+Weekly Performance  
+![Weekly Performance](visuals/looker_02_weekly_trends.png)
+
+Room Type Performance  
+![Room Type Performance](visuals/looker_03_room_type_performance.png)
+
+Response Time Performance  
+![Response Time Performance](visuals/looker_04_response_time_performance.png)
+
+Final Conclusions & Recommendations  
+![Final Conclusions](visuals/looker_05_final_conclusions.png)
 
 ---
 
