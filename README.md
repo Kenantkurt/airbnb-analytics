@@ -6,7 +6,7 @@
 ![Analytics](https://img.shields.io/badge/Skill-Analytics%20Engineering-green)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
-This project analyzes Airbnb demand and occupancy trends over time using SQL in Google BigQuery.
+This project analyzes Airbnb demand and occupancy trends over time using SQL in Google BigQuery.  
 The goal is to identify the busiest and least busy periods, understand demand dynamics, and evaluate whether revenue growth is driven by price changes or demand volume.
 
 The project follows a production-style analytics workflow, from raw data validation to business-ready KPI tables used for visualization in Looker Studio.
@@ -27,23 +27,23 @@ This analysis aims to:
 
 ## 📊 Key KPIs
 
-Occupancy Rate  
+### Occupancy Rate
 Percentage of booked days over total available capacity.
 
 occupancy_rate = SUM(booked_days) / SUM(total_days)
 
-Total Booked Days  
+### Total Booked Days
 Total number of booked days per period.
 
-Average Weekly Price  
+### Average Weekly Price
 Average listing price aggregated at weekly level.
 
-Estimated Weekly Revenue  
+### Estimated Weekly Revenue
 Proxy revenue metric calculated as:
 
 estimated_revenue = SUM(booked_days) × AVG(price)
 
-Segment-Level Analysis  
+### Segment-Level Analysis
 KPIs are also analyzed by:
 - Room type
 - Host response time
@@ -54,36 +54,40 @@ KPIs are also analyzed by:
 
 This project follows a layered data model inspired by analytics engineering best practices.
 
-Raw Layer (raw_data)
+### Raw Layer (`raw_data`)
 
-listing  
-Granularity: 1 row = 1 listing  
-Primary Key: id  
+**listing**
+- Granularity: 1 row = 1 listing
+- Primary Key: `id`
 
-calendar  
-Granularity: 1 row = 1 listing × 1 day  
-Primary Key: (listing_id, date)
+**calendar**
+- Granularity: 1 row = 1 listing × 1 day
+- Primary Key: `(listing_id, date)`
 
-Intermediate Layer (intermediate)
+---
 
-weekly_calendar  
-- Converts daily calendar data into weekly granularity  
-- Computes base metrics such as booked_days, available_days, weekly_avg_price, and listing-level occupancy  
+### Intermediate Layer (`intermediate`)
 
-join_enriched  
-- Joins weekly calendar data with listing attributes  
-- Enables segmentation by room_type, host_response_time, and review_scores_value  
+**weekly_calendar**
+- Converts daily calendar data into weekly granularity
+- Computes base metrics such as booked_days, available_days, weekly_avg_price, and listing-level occupancy
 
-Mart Layer (mart)
+**join_enriched**
+- Joins weekly calendar data with listing attributes
+- Enables segmentation by room_type, host_response_time, and review_scores_value
 
-weekly_performance  
-Global weekly occupancy, pricing, and revenue metrics  
+---
 
-room_type_performance  
-Performance metrics segmented by room type  
+### Mart Layer (`mart`)
 
-response_time_performance  
-Performance metrics segmented by host response time  
+**weekly_performance**
+- Global weekly occupancy, pricing, and revenue metrics
+
+**room_type_performance**
+- Performance metrics segmented by room type
+
+**response_time_performance**
+- Performance metrics segmented by host response time
 
 ---
 
@@ -104,24 +108,24 @@ These steps ensure that all KPIs are based on trustworthy data.
 
 ## 📈 Key Insights
 
-Demand Patterns Over Time  
-- The busiest periods occur in September and October  
-- These periods show both higher occupancy rates and higher total booked days  
+### Demand Patterns Over Time
+- The busiest periods occur in September and October
+- These periods show both higher occupancy rates and higher total booked days
 
-Price vs Demand  
-- Prices remain relatively stable across all periods  
-- Revenue growth is driven primarily by demand volume, not price increases  
+### Price vs Demand
+- Prices remain relatively stable across all periods
+- Revenue growth is driven primarily by demand volume, not price increases
 
-Conclusion  
+Conclusion:  
 The business exhibits a volume-driven revenue structure.
 
-Room Type Performance  
-- Entire home/apt generates the highest revenue despite higher prices  
-- Revenue is driven mainly by significantly higher booked days  
+### Room Type Performance
+- Entire home/apt generates the highest revenue despite higher prices
+- Revenue is driven mainly by significantly higher booked days
 
-Host Response Time Impact  
-- Faster host response times correlate with higher occupancy rates  
-- Response time has a stronger impact on revenue than price differences  
+### Host Response Time Impact
+- Faster host response times correlate with higher occupancy rates
+- Response time has a stronger impact on revenue than price differences
 
 ---
 
@@ -135,9 +139,9 @@ Host Response Time Impact
 
 ## 🛠 Tools & Technologies
 
-Google BigQuery — SQL-based data analysis and modeling  
-Looker Studio — Dashboarding and visualization  
-GitHub — Version control and portfolio presentation  
+- Google BigQuery — SQL-based data analysis and modeling
+- Looker Studio — Dashboarding and visualization
+- GitHub — Version control and portfolio presentation
 
 ---
 
@@ -148,21 +152,21 @@ The final KPIs and insights are visualized in Looker Studio.
 Public Looker Studio Dashboard:  
 PASTE_YOUR_LOOKER_STUDIO_LINK_HERE
 
-Dashboard Pages
+### Dashboard Pages
 
-Overview  
+#### Overview
 ![Overview](visuals/looker_01_overview.png)
 
-Weekly Performance  
+#### Weekly Performance
 ![Weekly Performance](visuals/looker_02_weekly_trends.png)
 
-Room Type Performance  
+#### Room Type Performance
 ![Room Type Performance](visuals/looker_03_room_type_performance.png)
 
-Response Time Performance  
+#### Response Time Performance
 ![Response Time Performance](visuals/looker_04_response_time_performance.png)
 
-Final Conclusions & Recommendations  
+#### Final Conclusions & Recommendations
 ![Final Conclusions](visuals/looker_05_final_conclusions.png)
 
 ---
@@ -172,9 +176,9 @@ Final Conclusions & Recommendations
 airbnb-analytics/
 │
 ├── sql/
-│   ├── raw/
-│   ├── intermediate/
-│   └── mart/
+│ ├── raw/
+│ ├── intermediate/
+│ └── mart/
 │
 ├── visuals/
 │
